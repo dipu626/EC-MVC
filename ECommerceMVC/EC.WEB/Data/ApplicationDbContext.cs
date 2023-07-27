@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EC.WEB.Models.Category;
+using Microsoft.EntityFrameworkCore;
 
 namespace EC.WEB.Data
 {
