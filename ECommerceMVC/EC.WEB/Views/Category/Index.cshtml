@@ -1,25 +1,43 @@
 ﻿@model List<EC.WEB.Models.Category.Category>
 
-<h1>Category List</h1>
+    <div class="container">
 
-<table class="table table-bordered table-striped">
+        <div class="row pt-4 pb-3">
+            <div class="col-6">
+                <h2 class="text-primary">
+                    Category List
+                </h2>
+            </div>
 
-    <thead>
-        <tr>
-            <th>Category Name</th>
-            <th>Display Order</th>
-        </tr>
-    </thead>
+            <div class="col-6 text-end">
+                <a asp-controller="" asp-action="" class="btn btn-outline-primary">
+                    <i class="bi bi-plus-lg"></i> Category
+                </a>
+            </div>
 
-    <tbody>
-        @foreach (var category in Model.OrderBy(it => it.DisplayOrder))
-        {
-            <tr>
-                <td>@category.Name</td>
-                <td>@category.DisplayOrder</td>
-            </tr>
-        }
+        </div>
 
-    </tbody>
+        <table class="table table-bordered table-striped">
 
-</table>
+            <thead>
+                <tr>
+                    <th>Category Name</th>
+                    <th>Display Order</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var category in Model.OrderBy(it => it.DisplayOrder))
+                {
+                    <tr>
+                        <td>@category.Name</td>
+                        <td>@category.DisplayOrder</td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
