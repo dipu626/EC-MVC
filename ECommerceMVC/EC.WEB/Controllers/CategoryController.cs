@@ -19,5 +19,11 @@ namespace EC.WEB.Controllers
             List<Category> categories = await dbContext.Categories.ToListAsync();
             return View(categories);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
