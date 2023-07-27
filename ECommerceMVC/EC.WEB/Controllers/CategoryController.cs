@@ -17,7 +17,7 @@ namespace EC.WEB.Controllers
         public async Task<IActionResult> Index()
         {
             List<Category> categories = await dbContext.Categories.ToListAsync();
-            return View();
+            return View(categories);
         }
     }
 }
