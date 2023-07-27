@@ -25,5 +25,14 @@ namespace EC.WEB.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Category category)
+        {
+            await dbContext.Categories.AddAsync(category);
+            await dbContext.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Category");
+        }
     }
 }

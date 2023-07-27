@@ -13,6 +13,7 @@ namespace EC.WEB.Models.Category
         public required string Name { get; set; }
 
         [DisplayName("Display Order")]
-        public int? DisplayOrder { get; set; }
+        [Required]
+        public required int DisplayOrder { get; set; }
     }
 }
