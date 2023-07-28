@@ -1,0 +1,12 @@
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\bin\Debug\net7.0\EC.Utility.deps.json
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\bin\Debug\net7.0\EC.Utility.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\bin\Debug\net7.0\EC.Utility.pdb
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\EC.Utility.csproj.AssemblyReference.cache
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\EC.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\EC.Utility.AssemblyInfoInputs.cache
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\EC.Utility.AssemblyInfo.cs
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\EC.Utility.csproj.CoreCompileInputs.cache
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\EC.Utility.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\refint\EC.Utility.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\EC.Utility.pdb
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.Utility\obj\Debug\net7.0\ref\EC.Utility.dll

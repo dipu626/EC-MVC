@@ -1,5 +1,5 @@
-﻿using EC.WEB.Data;
-using EC.WEB.Models.Category;
+﻿using EC.DataAccess.Data;
+using EC.Models.Category;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -73,7 +73,7 @@ namespace EC.WEB.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             Category? category = await dbContext.Categories.FirstOrDefaultAsync(it => it.Id == id);
-            
+
             if (category == null)
             {
                 return NotFound();

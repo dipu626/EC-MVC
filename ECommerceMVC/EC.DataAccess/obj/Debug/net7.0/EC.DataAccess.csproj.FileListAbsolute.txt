@@ -1,0 +1,17 @@
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\bin\Debug\net7.0\EC.DataAccess.deps.json
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\bin\Debug\net7.0\EC.DataAccess.runtimeconfig.json
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\bin\Debug\net7.0\EC.DataAccess.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\bin\Debug\net7.0\EC.DataAccess.pdb
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\bin\Debug\net7.0\EC.Models.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\bin\Debug\net7.0\EC.Models.pdb
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.csproj.AssemblyReference.cache
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.AssemblyInfoInputs.cache
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.AssemblyInfo.cs
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.csproj.CoreCompileInputs.cache
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.csproj.CopyComplete
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\refint\EC.DataAccess.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.pdb
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\EC.DataAccess.genruntimeconfig.cache
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.DataAccess\obj\Debug\net7.0\ref\EC.DataAccess.dll

@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v7.0": {
       "EC.WEB/1.0.0": {
         "dependencies": {
+          "EC.DataAccess": "1.0.0",
+          "EC.Models": "1.0.0",
+          "EC.Utility": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.9"
@@ -612,6 +615,26 @@
             "fileVersion": "5.0.20.51904"
           }
         }
+      },
+      "EC.DataAccess/1.0.0": {
+        "dependencies": {
+          "EC.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9"
+        },
+        "runtime": {
+          "EC.DataAccess.dll": {}
+        }
+      },
+      "EC.Models/1.0.0": {
+        "runtime": {
+          "EC.Models.dll": {}
+        }
+      },
+      "EC.Utility/1.0.0": {
+        "runtime": {
+          "EC.Utility.dll": {}
+        }
       }
     }
   },
@@ -1089,6 +1112,21 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "EC.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EC.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EC.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

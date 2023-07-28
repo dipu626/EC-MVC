@@ -1132,6 +1132,41 @@
             "rid": "win"
           }
         }
+      },
+      "EC.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "EC.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9"
+        },
+        "compile": {
+          "bin/placeholder/EC.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EC.DataAccess.dll": {}
+        }
+      },
+      "EC.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/EC.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EC.Models.dll": {}
+        }
+      },
+      "EC.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/EC.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EC.Utility.dll": {}
+        }
       }
     }
   },
@@ -3452,10 +3487,28 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "EC.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../EC.DataAccess/EC.DataAccess.csproj",
+      "msbuildProject": "../EC.DataAccess/EC.DataAccess.csproj"
+    },
+    "EC.Models/1.0.0": {
+      "type": "project",
+      "path": "../EC.Models/EC.Models.csproj",
+      "msbuildProject": "../EC.Models/EC.Models.csproj"
+    },
+    "EC.Utility/1.0.0": {
+      "type": "project",
+      "path": "../EC.Utility/EC.Utility.csproj",
+      "msbuildProject": "../EC.Utility/EC.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "EC.DataAccess >= 1.0.0",
+      "EC.Models >= 1.0.0",
+      "EC.Utility >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9"
@@ -3500,7 +3553,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\PtProjects\\EC-MVC\\ECommerceMVC\\EC.DataAccess\\EC.DataAccess.csproj": {
+              "projectPath": "D:\\Projects\\PtProjects\\EC-MVC\\ECommerceMVC\\EC.DataAccess\\EC.DataAccess.csproj"
+            },
+            "D:\\Projects\\PtProjects\\EC-MVC\\ECommerceMVC\\EC.Models\\EC.Models.csproj": {
+              "projectPath": "D:\\Projects\\PtProjects\\EC-MVC\\ECommerceMVC\\EC.Models\\EC.Models.csproj"
+            },
+            "D:\\Projects\\PtProjects\\EC-MVC\\ECommerceMVC\\EC.Utility\\EC.Utility.csproj": {
+              "projectPath": "D:\\Projects\\PtProjects\\EC-MVC\\ECommerceMVC\\EC.Utility\\EC.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
