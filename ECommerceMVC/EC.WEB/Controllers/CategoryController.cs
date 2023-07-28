@@ -37,6 +37,7 @@ namespace EC.WEB.Controllers
             {
                 await dbContext.Categories.AddAsync(category);
                 await dbContext.SaveChangesAsync();
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index", "Category");
             }
             return View();
@@ -62,9 +63,33 @@ namespace EC.WEB.Controllers
             {
                 dbContext.Categories.Update(category);
                 await dbContext.SaveChangesAsync();
+                TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index", "Category");
             }
             return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            Category? category = await dbContext.Categories.FirstOrDefaultAsync(it => it.Id == id);
+            
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            return View(category);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(Category category)
+        {
+            dbContext.Categories.Remove(category);
+            await dbContext.SaveChangesAsync();
+            TempData["success"] = "Category deleted successfully";
+
+            return RedirectToAction("Index", "Category");
         }
     }
 }
