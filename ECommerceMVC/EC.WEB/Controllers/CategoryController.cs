@@ -29,10 +29,10 @@ namespace EC.WEB.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Category category)
         {
-            //if (category.Name == category.DisplayOrder.ToString())
-            //{
-            //    ModelState.AddModelError("name", "This DisplayOrder cannot exactly match the Name.");
-            //}
+            if (category.Name == category.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("name", "This DisplayOrder cannot exactly match the Name.");
+            }
             if (ModelState.IsValid)
             {
                 await dbContext.Categories.AddAsync(category);
