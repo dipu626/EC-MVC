@@ -9,11 +9,13 @@ namespace EC.WEB.Models.Category
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(30)]
         [DisplayName("Category Name")]
         public required string Name { get; set; }
 
-        [DisplayName("Display Order")]
         [Required]
+        [Range(1, 100)]
+        [DisplayName("Display Order")]
         public required int DisplayOrder { get; set; }
     }
 }

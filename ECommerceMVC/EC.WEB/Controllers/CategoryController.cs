@@ -29,10 +29,13 @@ namespace EC.WEB.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Category category)
         {
-            await dbContext.Categories.AddAsync(category);
-            await dbContext.SaveChangesAsync();
-
-            return RedirectToAction("Index", "Category");
+            if (ModelState.IsValid)
+            {
+                await dbContext.Categories.AddAsync(category);
+                await dbContext.SaveChangesAsync();
+                return RedirectToAction("Index", "Category");
+            }
+            return View();
         }
     }
 }
