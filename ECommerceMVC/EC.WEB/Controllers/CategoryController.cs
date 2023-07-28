@@ -41,5 +41,30 @@ namespace EC.WEB.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            Category? category = await dbContext.Categories.FirstOrDefaultAsync(it => it.Id == id);
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            return View(category);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Categories.Update(category);
+                await dbContext.SaveChangesAsync();
+                return RedirectToAction("Index", "Category");
+            }
+            return View();
+        }
     }
 }
