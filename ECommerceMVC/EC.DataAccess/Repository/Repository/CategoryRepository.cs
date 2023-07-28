@@ -19,10 +19,10 @@ namespace EC.DataAccess.Repository.Repository
             this.dbContext = dbContext;
         }
 
-        public async Task SaveAsync()
-        {
-            await this.dbContext.SaveChangesAsync();
-        }
+        //public async Task SaveAsync()
+        //{
+        //    await this.dbContext.SaveChangesAsync();
+        //}
 
         public async Task UpdateAsync(Category category)
         {
