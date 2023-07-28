@@ -6,16 +6,16 @@ namespace EC.WEB.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ICategoryRepository categoryRepository;
+        private readonly IUnitOfWork unitOfWork;
 
-        public CategoryController(ICategoryRepository categoryRepository)
+        public CategoryController(IUnitOfWork unitOfWork)
         {
-            this.categoryRepository = categoryRepository;
+            this.unitOfWork = unitOfWork;
         }
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<Category> categories = await categoryRepository.GetAllAsync();
+            IEnumerable<Category> categories = await unitOfWork.Categories.GetAllAsync();
             return View(categories);
         }
 
@@ -34,8 +34,8 @@ namespace EC.WEB.Controllers
             }
             if (ModelState.IsValid)
             {
-                await categoryRepository.AddAsync(category);
-                await categoryRepository.SaveAsync();
+                await unitOfWork.Categories.AddAsync(category);
+                await unitOfWork.SaveAsync();
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index", "Category");
             }
@@ -45,7 +45,7 @@ namespace EC.WEB.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            Category? category = await categoryRepository.GetAsync(it => it.Id == id);
+            Category? category = await unitOfWork.Categories.GetAsync(it => it.Id == id);
 
             if (category == null)
             {
@@ -60,8 +60,8 @@ namespace EC.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                await categoryRepository.UpdateAsync(category);
-                await categoryRepository.SaveAsync();
+                await unitOfWork.Categories.UpdateAsync(category);
+                await unitOfWork.SaveAsync();
                 TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index", "Category");
             }
@@ -71,7 +71,7 @@ namespace EC.WEB.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            Category? category = await categoryRepository.GetAsync(it => it.Id == id);
+            Category? category = await unitOfWork.Categories.GetAsync(it => it.Id == id);
 
             if (category == null)
             {
@@ -84,8 +84,8 @@ namespace EC.WEB.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(Category category)
         {
-            await categoryRepository.RemoveAsync(category);
-            await categoryRepository.SaveAsync();
+            await unitOfWork.Categories.RemoveAsync(category);
+            await unitOfWork.SaveAsync();
             TempData["success"] = "Category deleted successfully";
 
             return RedirectToAction("Index", "Category");

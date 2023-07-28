@@ -8,7 +8,7 @@ namespace EC.DataAccess.Repository.IRepository
 {
     public interface IUnitOfWork
     {
-        ICategoryRepository CategoryRepository { get; }
+        ICategoryRepository Categories { get; }
         Task SaveAsync();
     }
 }
