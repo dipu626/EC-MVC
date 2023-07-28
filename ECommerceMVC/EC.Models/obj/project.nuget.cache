@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "4b2red+2wCQv9sBYp0d2tjTt82duL6yzy+HNDjESP9gMMcVVDdkOgbbWEpjM3+G+wqk+gSABOCqJGcYepjX73Q==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\PtProjects\\EC-MVC\\ECommerceMVC\\EC.Models\\EC.Models.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.grapecity.com/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    },
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.selise.biz/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
