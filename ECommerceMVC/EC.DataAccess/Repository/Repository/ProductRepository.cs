@@ -1,0 +1,27 @@
+﻿using EC.DataAccess.Data;
+using EC.DataAccess.Repository.IRepository;
+using EC.Models.Product;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EC.DataAccess.Repository.Repository
+{
+    public class ProductRepository : Repository<Product>, IProductRepository
+    {
+        private readonly ApplicationDbContext dbContext;
+
+        public ProductRepository(ApplicationDbContext dbContext) : base(dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
+        public async Task UpdateAsync(Product product)
+        {
+            dbContext.Update(product);
+        }
+
+    }
+}
