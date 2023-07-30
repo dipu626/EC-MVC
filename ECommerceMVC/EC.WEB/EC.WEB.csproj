@@ -28,12 +28,17 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EC.DataAccess\EC.DataAccess.csproj" />
     <ProjectReference Include="..\EC.Models\EC.Models.csproj" />
     <ProjectReference Include="..\EC.Utility\EC.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
