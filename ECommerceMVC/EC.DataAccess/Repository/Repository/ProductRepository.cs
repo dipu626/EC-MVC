@@ -1,11 +1,6 @@
 ﻿using EC.DataAccess.Data;
 using EC.DataAccess.Repository.IRepository;
 using EC.Models.Product;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EC.DataAccess.Repository.Repository
 {
