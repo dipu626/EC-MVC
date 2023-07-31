@@ -19,10 +19,6 @@ namespace EC.WEB.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             IEnumerable<Product> products = await unitOfWork.Products.GetAllAsync();
-            foreach (Product product in products)
-            {
-                product.Category = await unitOfWork.Categories.GetAsync(it => it.Id == product.CategoryId);
-            }
 
             return View(products);
         }

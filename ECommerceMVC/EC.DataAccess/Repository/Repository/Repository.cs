@@ -1,5 +1,6 @@
 ﻿using EC.DataAccess.Data;
 using EC.DataAccess.Repository.IRepository;
+using EC.Models.ProductModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace EC.DataAccess.Repository.Repository

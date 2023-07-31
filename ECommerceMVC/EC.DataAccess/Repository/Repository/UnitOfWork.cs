@@ -16,7 +16,6 @@ namespace EC.DataAccess.Repository.Repository
             Products = new ProductRepository(dbContext);
         }
 
-
         public async Task SaveAsync()
         {
             await dbContext.SaveChangesAsync();
