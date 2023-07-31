@@ -1,6 +1,7 @@
 ﻿using EC.DataAccess.Repository.IRepository;
-using EC.Models.Product;
+using EC.Models.ProductModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EC.WEB.Areas.Admin.Controllers
 {
@@ -17,6 +18,13 @@ namespace EC.WEB.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             IEnumerable<Product> products = await unitOfWork.Products.GetAllAsync();
+
+            IEnumerable<SelectListItem> categories = (await unitOfWork.Categories.GetAllAsync()).Select(it => new SelectListItem
+            {
+                Text = it.Name,
+                Value = it.Id.ToString(),
+            });
+
             return View(products);
         }
 

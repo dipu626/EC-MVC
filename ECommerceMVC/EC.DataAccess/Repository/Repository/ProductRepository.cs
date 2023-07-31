@@ -1,6 +1,6 @@
 ﻿using EC.DataAccess.Data;
 using EC.DataAccess.Repository.IRepository;
-using EC.Models.Product;
+using EC.Models.ProductModels;
 
 namespace EC.DataAccess.Repository.Repository
 {

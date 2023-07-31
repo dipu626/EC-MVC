@@ -1,4 +1,4 @@
-﻿using EC.Models.Product;
+﻿using EC.Models.ProductModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

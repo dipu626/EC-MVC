@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using EC.Models.CategoryModels;
 
-namespace EC.Models.Product
+namespace EC.Models.ProductModels
 {
     public class Product
     {
@@ -41,6 +42,11 @@ namespace EC.Models.Product
         [Range(1, 1000)]
         public double Price100 { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
+
+        public int CategoryId { get; set; }
+
+        [ForeignKey("CategoryId")]
+        public Category Category { get; set; }
     }
 }

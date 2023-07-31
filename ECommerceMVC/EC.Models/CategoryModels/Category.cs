@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace EC.Models.Category
+namespace EC.Models.CategoryModels
 {
     public class Category
     {

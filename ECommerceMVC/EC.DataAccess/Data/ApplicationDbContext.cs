@@ -1,5 +1,5 @@
-﻿using EC.Models.Category;
-using EC.Models.Product;
+﻿using EC.Models.CategoryModels;
+using EC.Models.ProductModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace EC.DataAccess.Data
@@ -35,6 +35,7 @@ namespace EC.DataAccess.Data
                     Price = 90,
                     Price50 = 85,
                     Price100 = 80,
+                    CategoryId = 15,
                     ImageUrl = string.Empty
                 },
                 new Product
@@ -48,6 +49,7 @@ namespace EC.DataAccess.Data
                     Price = 30,
                     Price50 = 25,
                     Price100 = 20,
+                    CategoryId = 15,
                     ImageUrl = string.Empty
                 },
                 new Product
@@ -61,6 +63,7 @@ namespace EC.DataAccess.Data
                     Price = 50,
                     Price50 = 40,
                     Price100 = 35,
+                    CategoryId = 15,
                     ImageUrl = string.Empty
                 },
                 new Product
@@ -74,6 +77,7 @@ namespace EC.DataAccess.Data
                     Price = 65,
                     Price50 = 60,
                     Price100 = 55,
+                    CategoryId = 15,
                     ImageUrl = string.Empty
                 },
                 new Product
@@ -87,6 +91,7 @@ namespace EC.DataAccess.Data
                     Price = 27,
                     Price50 = 25,
                     Price100 = 20,
+                    CategoryId = 15,
                     ImageUrl = string.Empty
                 },
                 new Product
@@ -100,6 +105,7 @@ namespace EC.DataAccess.Data
                     Price = 23,
                     Price50 = 22,
                     Price100 = 20,
+                    CategoryId = 15,
                     ImageUrl = string.Empty
                 }
                 );

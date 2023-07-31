@@ -1,5 +1,5 @@
 ﻿using EC.DataAccess.Repository.IRepository;
-using EC.Models.Category;
+using EC.Models.CategoryModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EC.WEB.Areas.Admin.Controllers

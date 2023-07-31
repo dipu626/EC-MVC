@@ -1,6 +1,6 @@
 ﻿using EC.DataAccess.Data;
 using EC.DataAccess.Repository.IRepository;
-using EC.Models.Category;
+using EC.Models.CategoryModels;
 
 namespace EC.DataAccess.Repository.Repository
 {

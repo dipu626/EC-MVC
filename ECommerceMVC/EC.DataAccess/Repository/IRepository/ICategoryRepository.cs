@@ -1,4 +1,4 @@
-﻿using EC.Models.Category;
+﻿using EC.Models.CategoryModels;
 
 namespace EC.DataAccess.Repository.IRepository
 {
