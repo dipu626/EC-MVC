@@ -24,7 +24,7 @@ namespace EC.WEB.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Upsert(int? id)
         {
             IEnumerable<SelectListItem> categoryList = (await unitOfWork.Categories.GetAllAsync()).Select(it => new SelectListItem
             {
@@ -41,43 +41,22 @@ namespace EC.WEB.Areas.Admin.Controllers
                 CategoryList = categoryList
             };
 
+            if ((id ?? 0) > 0)
+            {
+                productVM.Product = await unitOfWork.Products.GetAsync(it => it.Id == id);
+            }
+
             return View(productVM);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ProductVM productVM)
+        public async Task<IActionResult> Upsert(ProductVM productVM, IFormFile? file)
         {
             if (ModelState.IsValid)
             {
                 await unitOfWork.Products.AddAsync(productVM.Product);
                 await unitOfWork.SaveAsync();
                 TempData["success"] = "Product created successfully";
-                return RedirectToAction("Index", "Product");
-            }
-            return View();
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Edit(int id)
-        {
-            Product? product = await unitOfWork.Products.GetAsync(it => it.Id == id);
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return View(product);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Edit(Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                await unitOfWork.Products.UpdateAsync(product);
-                await unitOfWork.SaveAsync();
-                TempData["success"] = "Product edited successfully";
                 return RedirectToAction("Index", "Product");
             }
             return View();

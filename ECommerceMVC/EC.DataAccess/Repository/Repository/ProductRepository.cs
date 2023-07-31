@@ -2,6 +2,7 @@
 using EC.DataAccess.Repository.IRepository;
 using EC.Models.ProductModels;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace EC.DataAccess.Repository.Repository
 {
@@ -16,8 +17,14 @@ namespace EC.DataAccess.Repository.Repository
 
         public new async Task<IEnumerable<Product>> GetAllAsync()
         {
-            var products = await dbContext.Products.Include(it => it.Category).ToListAsync();
+            List<Product> products = await dbContext.Products.Include(it => it.Category).ToListAsync();
             return products;
+        }
+
+        public new async Task<Product?> GetAsync(Expression<Func<Product, bool>> filter)
+        {
+            Product? product = await dbContext.Products.Include(it => it.Category).FirstOrDefaultAsync(filter);
+            return product;
         }
 
         public async Task UpdateAsync(Product product)
