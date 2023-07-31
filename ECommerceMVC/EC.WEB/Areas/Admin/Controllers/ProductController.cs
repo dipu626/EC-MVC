@@ -1,5 +1,6 @@
 ﻿using EC.DataAccess.Repository.IRepository;
 using EC.Models.ProductModels;
+using EC.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -18,6 +19,10 @@ namespace EC.WEB.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             IEnumerable<Product> products = await unitOfWork.Products.GetAllAsync();
+            foreach (Product product in products)
+            {
+                product.Category = await unitOfWork.Categories.GetAsync(it => it.Id == product.CategoryId);
+            }
 
             return View(products);
         }
@@ -31,17 +36,24 @@ namespace EC.WEB.Areas.Admin.Controllers
                 Value = it.Id.ToString(),
             });
 
-            ViewData["CategoryList"] = categoryList;
+            //ViewBag.CategoryList = categoryList;
+            //ViewData["CategoryList"] = categoryList;
 
-            return View();
+            ProductVM productVM = new()
+            {
+                Product = new Product(),
+                CategoryList = categoryList
+            };
+
+            return View(productVM);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(ProductVM productVM)
         {
             if (ModelState.IsValid)
             {
-                await unitOfWork.Products.AddAsync(product);
+                await unitOfWork.Products.AddAsync(productVM.Product);
                 await unitOfWork.SaveAsync();
                 TempData["success"] = "Product created successfully";
                 return RedirectToAction("Index", "Product");

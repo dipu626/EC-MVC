@@ -257,3 +257,6 @@ D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.WEB\bin\Debug\net7.0\runtimes\unix
 D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.WEB\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.WEB\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.WEB\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.WEB\obj\Debug\net7.0\EC.WEB.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.WEB\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Projects\PtProjects\EC-MVC\ECommerceMVC\EC.WEB\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
