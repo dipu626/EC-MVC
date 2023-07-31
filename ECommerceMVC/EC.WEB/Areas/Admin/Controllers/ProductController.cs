@@ -19,18 +19,20 @@ namespace EC.WEB.Areas.Admin.Controllers
         {
             IEnumerable<Product> products = await unitOfWork.Products.GetAllAsync();
 
-            IEnumerable<SelectListItem> categories = (await unitOfWork.Categories.GetAllAsync()).Select(it => new SelectListItem
+            return View(products);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            IEnumerable<SelectListItem> categoryList = (await unitOfWork.Categories.GetAllAsync()).Select(it => new SelectListItem
             {
                 Text = it.Name,
                 Value = it.Id.ToString(),
             });
 
-            return View(products);
-        }
+            ViewBag.CategoryList = categoryList;
 
-        [HttpGet]
-        public IActionResult Create()
-        {
             return View();
         }
 
