@@ -31,7 +31,7 @@ namespace EC.WEB.Areas.Admin.Controllers
                 Value = it.Id.ToString(),
             });
 
-            ViewBag.CategoryList = categoryList;
+            ViewData["CategoryList"] = categoryList;
 
             return View();
         }
